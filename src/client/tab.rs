@@ -129,6 +129,7 @@ pub trait Pane {
     fn clear_scroll(&mut self);
     fn active_at(&self) -> Instant;
     fn set_active_at(&mut self, instant: Instant);
+    fn is_sync_pane_active(&self) -> bool;
 
     fn right_boundary_x_coords(&self) -> usize {
         self.x() + self.columns()

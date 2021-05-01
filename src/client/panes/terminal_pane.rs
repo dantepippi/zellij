@@ -47,6 +47,7 @@ pub struct TerminalPane {
     pub max_height: Option<usize>,
     pub max_width: Option<usize>,
     pub active_at: Instant,
+    pub is_sync_pane_active: bool,
     vte_parser: vte::Parser,
 }
 
@@ -289,6 +290,10 @@ impl Pane for TerminalPane {
     fn set_active_at(&mut self, time: Instant) {
         self.active_at = time;
     }
+
+    fn is_sync_pane_active(&self) -> bool {
+        self.is_sync_pane_active
+    }
 }
 
 impl TerminalPane {
@@ -304,6 +309,7 @@ impl TerminalPane {
             max_width: None,
             vte_parser: vte::Parser::new(),
             active_at: Instant::now(),
+            is_sync_pane_active: false,
         }
     }
     pub fn get_x(&self) -> usize {
