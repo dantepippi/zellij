@@ -16,6 +16,7 @@ pub struct PluginPane {
     pub max_height: Option<usize>,
     pub max_width: Option<usize>,
     pub active_at: Instant,
+    pub is_sync_pane_active: bool,
 }
 
 impl PluginPane {
@@ -35,6 +36,7 @@ impl PluginPane {
             max_height: None,
             max_width: None,
             active_at: Instant::now(),
+            is_sync_pane_active: false,
         }
     }
 }
@@ -220,5 +222,13 @@ impl Pane for PluginPane {
 
     fn set_active_at(&mut self, time: Instant) {
         self.active_at = time;
+    }
+
+    fn is_sync_pane_active(&self) -> bool {
+        self.is_sync_pane_active
+    }
+
+    fn toggle_sync_pane(&mut self) {
+        self.is_sync_pane_active = !self.is_sync_pane_active;
     }
 }

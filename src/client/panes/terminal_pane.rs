@@ -294,6 +294,10 @@ impl Pane for TerminalPane {
     fn is_sync_pane_active(&self) -> bool {
         self.is_sync_pane_active
     }
+
+    fn toggle_sync_pane(&mut self) {
+        self.is_sync_pane_active = !self.is_sync_pane_active;
+    }
 }
 
 impl TerminalPane {
