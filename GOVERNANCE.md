@@ -19,7 +19,7 @@ He also has veto power over decisions made by the group. Since we strive to make
 * Henil Dedania <dedaniahenil@gmail.com>
 * Roee Shapira <ro33.sha@gmail.com>
 * Kyle Sutherland-Cash <kyle.sutherlandcash@gmail.com>
-* Dante Pippi <dante.dpf@gmail.com>
+* Dante Filho <dante.dpf@gmail.com>
 * Thomas Linford <linford.t@gmail.com>
 * Jaeheon Ji <atx6419@gmail.com>
 * Raph <zellij@raphtec.net>
